@@ -1,14 +1,11 @@
 # Project
+Edge (chromium) extension that will search contents of current tab for defined terms in the glossary file.
 
+## Get Started
+1. Fork the repo and clone to local machine
+1. Side-load the extension using this guide: [Sideload an extension](https://learn.microsoft.com/en-us/microsoft-edge/extensions-chromium/getting-started/extension-sideloading)
 > This repo has been populated by an initial template to help get you started. Please
 > make sure to update the content to build a great experience for community-building.
-
-As the maintainer of this project, please make a few updates:
-
-- Improving this README.MD file to provide a great experience
-- Updating SUPPORT.MD with content about this project's support experience
-- Understanding the security reporting process in SECURITY.MD
-- Remove this section from the README
 
 ## Contributing
 
