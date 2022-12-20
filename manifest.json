@@ -19,7 +19,7 @@
         "scripts/content.js"
       ],
       "matches": [
-        "https://localhost:5004/*"
+        "<all_urls>"
       ]
     }
   ],
