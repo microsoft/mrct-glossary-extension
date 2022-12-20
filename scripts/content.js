@@ -8,10 +8,24 @@ const wrapAsyncFunction = (listener) => (request, sender, sendResponse) => {
 
 chrome.runtime.onMessage.addListener(
   wrapAsyncFunction(async (request, sender) => {
+    const pageBody = document.querySelector('body');
+    var searchBody = pageBody.textContent;
+
+    //searchBody.replace(/''/g,'<span class="highlight-val">'+v+'</span>');
+
     var glossary = await fetchGlossary(request);
+    var results = [];
+
+    glossary.forEach((g) => {
+      const searchHits = searchBody.search(`${g.Term}`);
+      if (searchHits >= 0) {
+        results.push(g);
+      }
+    });
+
     // do search here
     // return 'faked' search results for now
-    return [glossary[0], glossary[1], glossary[2]];
+    return results;
   })
 );
 
